@@ -8,6 +8,10 @@ from fastai.vision import *
 app = Flask(__name__)
 
 @app.route('/')
+def index():
+    return "<h1>Welcome to our server !!</h1>"
+
+@app.route('/test')
 def handler():
     defaults.device = torch.device('cpu')
 
